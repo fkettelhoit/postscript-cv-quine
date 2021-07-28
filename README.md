@@ -1,12 +1,12 @@
-# Curriculum Vitae as a Postcript Quine
+# Curriculum Vitae as a PostScript Quine
 
-Why write your CV in a word processor or generate it with a markup language if you could just have the real deal and write a Postscript file that parses and displays itself, as a [quine](https://en.wikipedia.org/wiki/Quine_(computing))?
+Why write your CV in a word processor or generate it with a markup language if you could just have the real deal and write a PostScript file that parses and displays itself, as a [quine](https://en.wikipedia.org/wiki/Quine_(computing))?
 
-`ps.cv` is a Postscript file that does exactly this. It parses the CV at the beginning of the file, renders it in a way that copying and pasting the contents from the displayed file retains all the markup information and adds a footer with all the roughly 100 lines of Postscript code necessary to parse the markup and display itself.
+`ps.cv` is a PostScript file that does exactly this. It parses the CV at the beginning of the file, renders it in a way that copying and pasting the contents from the displayed file retains all the markup information and adds a footer with all the roughly 100 lines of PostScript code necessary to parse the markup and display itself.
 
 ## Example CV
 
-The Postscript file in this repository contains the CV of the fictional author [Herbert Quine](https://en.wikipedia.org/wiki/An_Examination_of_the_Work_of_Herbert_Quain). The file [cv.ps](cv.ps) displayed as a PDF looks like [cv.pdf](cv.pdf) and is based on the following CV markup (with the formatting being arbitrary, all the newlines and multiple spaces could be replaced with a single space each):
+The PostScript file in this repository contains the CV of the fictional author [Herbert Quine](https://en.wikipedia.org/wiki/An_Examination_of_the_Work_of_Herbert_Quain). The file [cv.ps](cv.ps) displayed as a PDF looks like [cv.pdf](cv.pdf) and is based on the following CV markup (with the formatting being arbitrary, all the newlines and multiple spaces could be replaced with a single space each):
 
 ```
     ~ Herbert
@@ -47,8 +47,8 @@ The Postscript file in this repository contains the CV of the fictional author [
 
     ~ About this CV
 
-/ A Postscript quine & markup parser
-- This Postscript file is a quine, including and displaying its own code
+/ A PostScript quine & markup parser
+- This PostScript file is a quine, including and displaying its own code
 - Copy all the text on this page, then paste it in a new file with a .ps extension
 - The resulting .ps file will display the same CV with all of the code
 - The CV is parsed as a whitespace-insensitive custom markup language

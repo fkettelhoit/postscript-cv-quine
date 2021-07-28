@@ -90,11 +90,11 @@ T*
 /TT2 1 Tf
 0 g
 -7.75 -2.2 TD
-(~ About this CV / A Postscript quine & markup parser )Tj
+(~ About this CV / A PostScript quine & markup parser )Tj
 /TT4 1 Tf
 0.4 g
 7.75 -1.2 TD
-(- This Postscript file is a quine, containing and displaying its own code )Tj
+(- This PostScript file is a quine, containing and displaying its own code )Tj
 T*
 (- Copy all the text on this page, then paste it in a new file with a .ps extension )Tj
 T*
@@ -112,7 +112,7 @@ T*
 0.6 g
 (%!PS-Adobe-2.0)Tj
 0 -1 TD
-(\(This CV is a Postscript Quine\) )Tj
+(\(This CV is a PostScript Quine\) )Tj
 T*
 (\(As a .ps file it reproduces itself\)\()Tj
 -18.3333 -107.3333 TD
@@ -319,8 +319,8 @@ endobj
 endobj
 14 0 obj
 <<
-/CreationDate (D:20210728133547+02'00')
-/ModDate (D:20210728133547+02'00')
+/CreationDate (D:20210728140846+02'00')
+/ModDate (D:20210728140846+02'00')
 /Producer (PSNormalizer.framework)
 >>
 endobj
@@ -354,7 +354,7 @@ trailer
 /Size 16
 /Root 15 0 R
 /Info 14 0 R
-/ID [<ef8d31185a475e8c6513ba2105d0331a><ef8d31185a475e8c6513ba2105d0331a>]
+/ID [<353babc4fee78e7b2ee4bbcc4347498b><353babc4fee78e7b2ee4bbcc4347498b>]
 >>
 startxref
 7598
@@ -363,8 +363,8 @@ startxref
 << /Resources 3 0 R /Type /Page /Contents 2 0 R /Rotate 0 /Parent 8 0 R >>
 endobj
 14 0 obj
-<< /ModDate (D:20210728113557Z00'00') /Producer (macOS Version 11.2.1 \(Build 20D74\) Quartz PDFContext, AppendMode 1.1)
-/CreationDate (D:20210728133547+02'00') >>
+<< /ModDate (D:20210728120859Z00'00') /Producer (macOS Version 11.2.1 \(Build 20D74\) Quartz PDFContext, AppendMode 1.1)
+/CreationDate (D:20210728140846+02'00') >>
 endobj
 xref
 0 2
@@ -373,7 +373,7 @@ xref
 14 1
 0000008163 00000 n 
 trailer
-<< /ID [<EF8D31185A475E8C6513BA2105D0331A><87F58D80B0CA396935CE004D3B27B520> ] /Root 15 0 R /Size 16 /Prev 7598 /Info 14 0 R >> 
+<< /ID [<353BABC4FEE78E7B2EE4BBCC4347498B><209BCD16349A80748B1630B6D89AEFD7> ] /Root 15 0 R /Size 16 /Prev 7598 /Info 14 0 R >> 
 startxref
 8343
 %%EOF
