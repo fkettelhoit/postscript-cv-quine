@@ -1,0 +1,167 @@
+%!PS-Adobe-2.0
+(This CV is a Postscript Quine)
+(As a .ps file it reproduces itself)
+(
+    ~ Herbert
+    ~ Quine
+- email@example.com, github.com/fkettelhoit
+- Roscommon, Ireland
+
+    ~ About Me
+
+/ Writer of experimental fiction
+- I am like Cowley's odes, I belong not to art but to the history of art
+- I deploy the servile, stubborn preservation of past and bygone books
+- There is no European man or woman that's not a writer, potentially or in fact
+
+    ~ Publications
+
+/ Statements (1939)
+- 8 stories, each prefiguring a good plot
+- Each plot is then intentionally frustrated by the author
+
+/ The Secret Mirror (1937)
+- Two-act comedy, with the first act as the work of a character in the second act
+- First act takes place in the country home of General Thrale
+- Characters of the first act reappear in the second, under different names
+
+/ April March (1936)
+- Novel with nine different beginnings, trifurcating backwards in time
+- "Regressive, ramifying fiction"
+- "I have reclaimed for this novel the essential features of every game"
+
+/ The God of the Labyrinth (1933)
+- Detective story in which the solution given is wrong
+- But this fact is not immediately obvious
+- Incomprehensible murder in the early pages of the book
+- Slow discussion in the middle
+- Solution of the crime toward the end
+- "Everyone believed that the chessplayer had met accidentally."
+
+    ~ About this CV
+
+/ A Postscript quine & markup parser
+- This Postscript file is a quine, containing and displaying its own code
+- Copy all the text on this page, then paste it in a new file with a .ps extension
+- The resulting .ps file will display the same CV with all of the code
+- The CV is parsed as a whitespace-insensitive custom markup language
+- Newlines and other whitespace can be used interchangeably
+- The data for the CV is fully contained in the displayed CV
+- The footer only contains the non-CV code
+)
+(
+/!{def}def
+/~{exch}!
+/?{~ !}!
+/+{add}!
+/-{sub}!
+/@{get}!
+/${put}!
+/@@{getinterval}!
+/$${putinterval}!
+/#{length}!
+/.{pop}!
+/@?{anchorsearch}!
+/mv{moveto}!
+/typeface{findfont ~ scalefont setfont}!
+/clr{setgray}!
+
+/code ?
+/cv ?
+/p2 ?
+/p1 ?
+
+/top 750 !
+/marg 140 !
+/page [595 842]!
+
+<< /PageSize page >> setpagedevice
+
+/trim{/str ?
+    /out str # string ! /del 0 ! /blank false !
+    0 1 str # 1 -{/i ? str i @ /s ?
+        s 16#0a eq s 16#20 eq or{
+            blank{/del del 1 + !}{out i del - 16#20 $}ifelse
+            /blank true !
+        }{
+            out i del - str i @ $
+            /blank false !
+        }ifelse
+    }for
+    out 0 str # del - @@
+}!
+
+/parse{/str ?
+    /l 0 ! /r 0 ! /s 3 !
+    /out{[
+        s
+        l r gt{0}{r l -}ifelse
+        str l i l - @@
+    ]}!
+    mark
+    0 1 str #{/i ?
+        /rest str i str # i - @@ !
+        rest(~ )@?{. out ~ /l i ! /s 3 !}if .
+        rest(/ )@?{. l r le{out ~ /l i !}if /r i ! /s 2 !}if .
+        rest(- )@?{. out ~ /l i ! /r i ! /s 1 !}if .
+    }for
+    /i str # !
+    out
+    counttomark array astore
+}!
+
+/render{
+    /y top !
+    .6 clr{
+        aload . /str ? /i ? /s ?
+        /font s 3 eq{33}{11}ifelse !
+        s 3 eq{/y y font .4 mul + !}if
+        s 2 eq{0 clr} if
+        s 1 eq{.4 clr}if
+        font s 1 eq{/Helvetica}{/Helvetica-Bold}ifelse typeface
+        /offset str 0 i @@ stringwidth . !
+        s 2 eq{/y y font - !}if
+        marg offset - y font - mv
+        str show /y y font 1.2 mul - !
+    }forall
+}!
+
+cv trim parse render
+
+/++{/r ? /l ?
+    /j l # r # + string !
+    j 0 l $$
+    j l # r $$
+    j
+}!
+
+/quine{
+    /c ?
+    /q <202928> c ++ <29> ++ ( dup cvx exec ) ++ !
+    .6 clr
+    /font 6 !
+    marg top mv
+    font /Courier typeface
+    (%!PS-Adobe-2.0) show
+    marg top font - mv
+    <28> p1 ++ <2920> ++ show
+    marg top font 2 mul - mv
+    <28> p2 ++ <2928> ++ show
+    /y 100 !
+    /l 0 !
+    /marg 30 !
+    0 1 q # 1 -{ /i ?
+        q i @( )0 @ eq i l - 140 gt and
+        i q # 1 - eq or{
+            marg y font - mv
+            q l i l - @@ show
+            /y y font - !
+            /l i !
+        }if
+    }for
+}!
+
+code trim quine
+
+showpage)
+dup cvx exec
