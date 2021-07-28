@@ -4,6 +4,8 @@ Why write your CV in a word processor or generate it with a markup language if y
 
 `ps.cv` is a Postscript file that does exactly this. It parses the CV at the beginning of the file, renders it in a way that copying and pasting the contents from the displayed file retains all the markup information and adds a footer with all the roughly 100 lines of Postscript code necessary to parse the markup and display itself.
 
+## Example CV
+
 The Postscript file in this repository contains the CV of the fictional author [Herbert Quine](https://en.wikipedia.org/wiki/An_Examination_of_the_Work_of_Herbert_Quain). The file [cv.ps](cv.ps) displayed as a PDF looks like [cv.pdf](cv.pdf) and is based on the following CV markup (with the formatting being arbitrary, all the newlines and multiple spaces could be replaced with a single space each):
 
 ```
@@ -54,3 +56,7 @@ The Postscript file in this repository contains the CV of the fictional author [
 - The data for the CV is fully contained in the displayed CV
 - The footer only contains the non-CV code
 ```
+
+The above CV will be displayed as the following [PDF](cv.pdf):
+
+<img width="521" alt="CV output as PDF" src="https://user-images.githubusercontent.com/358580/127316278-5a636b21-d5c7-4719-9494-62233cb62391.png">
